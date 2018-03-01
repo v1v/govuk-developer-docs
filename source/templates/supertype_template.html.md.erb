@@ -15,3 +15,12 @@ Field in content-store: `<%= supertype.id %>`
 | **<%= item.fetch("id") %>**<br/><%= item["description"] %> | <%= item.fetch("document_types").map { |d| link_to(d, document_type_url(d)) }.join("<br/>") %> |
 <% end %>
 | <%= supertype.default %> | All other types |
+
+<% if supertype.id == "content_purpose_supergroup" %>
+  | Name | Subgroups |
+  | --- | --- |
+  <% Supergroups.details.supergroups do |group|%>
+  | **<%= group.fetch("id") %>** | <%= group.fetch("subgroups").map { |subgroup| subgroup }.join("<br/>") %> |
+  <% end %>
+  <%= Supergroups.details.documentation %>
+<% end %>
