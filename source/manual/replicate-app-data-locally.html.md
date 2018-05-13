@@ -143,6 +143,23 @@ quicker when not run over NFS:
 
 Then follow the instructions above for importing using the `-s` flag.
 
+## Importing data for specific database systems
+
+If you only need to import a dump for a specific database system, for example to import only Postgresql:
+
+```terminal
+dev$ ./replicate-data-local.sh -d backups/2018-05-04/ -s -m -q -e -t
+```
+
+See below for hints on the options.
+
+## Help with replication script options
+
+The script supports the `-h` and `--help` flags
+```terminal
+dev$ ./replicate-data-local.sh -h
+```
+
 ## If you're running out of disk space
 
 See [running out of disk space in development](/manual/development-disk-space.html).
