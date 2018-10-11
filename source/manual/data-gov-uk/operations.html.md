@@ -77,4 +77,4 @@ cf ssh publish-data-beta-production
 /tmp/lifecycle/launcher /home/vcap/app 'rails runner CKAN::V26::CKANOrgSyncWorker.new.perform' ''
 ```
 
-Now run `bundle exec sidekiq` and `rails s` and monitor the resulting jobs in the [Sidekiq Web UI](/manual/data-gov-uk-monitoring.html#sidekiq-publish).
+Now run `bundle exec sidekiq` and `rails s` and monitor the resulting jobs in the [Sidekiq Web UI](/manual/data-gov-uk/monitoring.html#sidekiq-publish).

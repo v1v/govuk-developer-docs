@@ -1,9 +1,8 @@
 ---
 owner_slack: "#govuk-platform-health"
 title: Troubleshooting data.gov.uk
-section: data.gov.uk
 layout: manual_layout
-parent: "/manual.html"
+parent: "/data-gov-uk.html"
 last_reviewed_on: 2018-08-15
 review_in: 6 months
 ---
@@ -43,11 +42,10 @@ cf ssh publish-data-beta-production
 >>> Dataset.update(status: 'published')
 ```
 
-A [reindex](/manual/data-gov-uk-operations.html#reindexing-find) must then be done to update the status with the Elastic instance that serves Find.
+A [reindex](/manual/data-gov-uk/operations.html#reindexing-find) must then be done to update the status with the Elastic instance that serves Find.
 
 ## Datasets published in CKAN are not appearing on Find
 
-Check the Sidekiq queue (see [monitoring section](/manual/data-gov-uk-monitoring.html#sidekiq-publish)) length to ensure the queue length is not too long.  You should not be seeing more jobs than the number of datasets in CKAN.
+Check the Sidekiq queue (see [monitoring section](/manual/data-gov-uk/monitoring.html#sidekiq-publish)) length to ensure the queue length is not too long.  You should not be seeing more jobs than the number of datasets in CKAN.
 
 If the queue is too long, you should clear the queue.  The next sync process will repopulate the queue with any relevant datasets that require updating.
-

@@ -12,8 +12,8 @@ review_in: 6 months
 [ckan]: apps/ckanext-datagovuk
 [paas]: https://docs.cloud.service.gov.uk/#technical-documentation-for-gov-uk-paas
 [signon]: manual/manage-sign-on-accounts
-[deployment]: manual/data-gov-uk-deployment
-[monitoring]: manual/data-gov-uk-monitoring
+[deployment]: manual/data-gov-uk/deployment
+[monitoring]: manual/data-gov-uk/monitoring
 [signon-adr]: https://github.com/alphagov/datagovuk_publish/blob/master/doc/adr/0002-signon.md
 [statistics]: http://statistics.data.gov.uk
 [land-registry]: http://landregistry.data.gov.uk
