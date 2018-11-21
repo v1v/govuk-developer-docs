@@ -226,6 +226,15 @@ paster --plugin=ckan user remove USERNAME -c $CKAN_INI
 paster --plugin=ckan user setpass USERNAME -c $CKAN_INI
 ```
 
+#### Syncing users between Drupal and CKAN
+
+Sometimes the users in CKAN will become out of sync with the users in Drupal.
+
+Run the following paster command to re-sync the users:
+```
+paster --plugin=ckanext-dgu user_sync -w --config=/var/ckan/ckan.ini
+```
+
 ### Deleting a dataset
 
 [CKAN] has two types of deletions, the default soft-delete, and a purge.  The soft delete gives the option of
