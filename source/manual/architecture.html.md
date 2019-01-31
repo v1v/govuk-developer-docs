@@ -1,7 +1,7 @@
 ---
 owner_slack: "@vitalie.mogoreanu"
 title: Architectural overview of GOV.UK applications
-section: Architecture
+section: Learn GOV.UK
 layout: manual_layout
 parent: "/manual.html"
 last_reviewed_on: 2018-10-02

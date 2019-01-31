@@ -3,7 +3,7 @@ owner_slack: "#govuk-platform-health"
 title: Who do I ask for support?
 parent: "/manual.html"
 layout: manual_layout
-section: Basics
+section: Learn GOV.UK
 last_reviewed_on: 2018-11-20
 review_in: 6 months
 ---
