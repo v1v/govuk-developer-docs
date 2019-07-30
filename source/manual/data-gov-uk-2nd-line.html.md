@@ -133,6 +133,22 @@ Harvesting is where publishers can automatically import their data to data.gov.u
 ### Restart a harvester
 1. Login to [CKAN][ckan] as a sysadmin user (credentials are available in the `govuk-secrets` password store, under `datagovuk/ckan`).
 2. Navigate to the relevant harvester (use the 'Harvest' button in the header).
+
+  - To locate the harvest source from a given dataset
+    - locate the dataset name from the url if not given, https://data.gov.uk/dataset/<uuid\>/<dataset name\>
+    - run this script on the ckan database:
+ 
+    ```
+    SELECT REPLACE(LOWER(harvest_source.title),' ', '-') AS harvest_source_for_url
+    FROM harvest_source
+    JOIN "group" ON "group".id = harvest_source.publisher_id
+    JOIN package ON package.owner_org = "group".id
+    WHERE package.name = '<dataset name>';
+    ```
+    
+    - The harvest source name can be entered into the url:
+      - https://ckan.publishing.service.gov.uk/harvest/<harvest source name\>
+  
 3. You will see a list of the datasets imported by this harvest source.
 4. Click the 'Manage' button.
 5. If the harvester is currently running, click the 'Stop' button to stop it.  Once it has stopped, or if it is not currently running, click the 'Reharvest' button.  You will know if the harvester is running because the 'Reharvest' button will be disabled.
