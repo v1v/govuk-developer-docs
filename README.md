@@ -14,10 +14,17 @@ This means that some of the files (like the CSS, javascripts and layouts) are
 managed in the template and are not supposed to be modified here. Any project-specific
 Ruby code needs to go into `/app`.
 
+It's something to do It is
 You can pull down the latest version of the template by running:
-sdfsf
+## Getting Started
 
-US
+Rule 1: Don't start sentences with "so":
+
+> So, this is an example sentence.
+
+Rule 2: Don't start a sentence with "there is" or "there are":
+
+> There are many ways to start a sentence.a
 
 ```sh
 bin/update

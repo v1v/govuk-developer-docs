@@ -1,10 +1,11 @@
 StylesPath = styles/
-MinAlertLevel = error
+MinAlertLevel = warning
 
 # Global settings (applied to every syntax)
 [*]
 # List of styles to load
 BasedOnStyles = vale, PlainLanguage
 
-PlainLanguage.Slash = NO
+PlainLanguage.Slash = warning
 PlainLanguage.Words = warning
+BasedOnStyles = write-good
