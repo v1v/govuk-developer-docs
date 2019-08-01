@@ -12,7 +12,7 @@ review_in: 6 months
 GOV.UK uses our [Content Delivery Network (Fastly)][cdn] to run A/B and multivariate tests.
 
 For a general introduction to A/B testing from a content design perspective, see the [Confluence Wiki](https://bit.ly/AB-testing-GOVUK).
-
+it is it's
 [cdn]: https://docs.publishing.service.gov.uk/manual/cdn.html
 
 ![](https://docs.google.com/drawings/d/e/2PACX-1vR67bcDfNDaa4buyKGKQev0xUsjcD9RzjNCjWGhr0HJtXRmSNaltPJotXjwmKUmZj0ZH_B2xAymEYbV/pub?w=1330&h=517)

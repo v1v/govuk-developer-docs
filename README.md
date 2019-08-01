@@ -24,7 +24,7 @@ Rule 1: Don't start sentences with "so":
 
 Rule 2: Don't start a sentence with "there is" or "there are":
 
-> There are many ways to start a sentence.a
+> There are   many ways to start a sentence.a
 
 ```sh
 bin/update
