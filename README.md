@@ -15,6 +15,7 @@ managed in the template and are not supposed to be modified here. Any project-sp
 Ruby code needs to go into `/app`.
 
 You can pull down the latest version of the template by running:
+sdfsf
 
 ```sh
 bin/update
