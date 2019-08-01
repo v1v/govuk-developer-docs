@@ -13,6 +13,8 @@ node {
       sh '''
         curl https://pre-commit.com/install-local.py | python -
         git diff-tree --no-commit-id --name-only -r $(git rev-parse HEAD) | xargs pre-commit run --files
+        echo something
+        
       '''
     }
 
