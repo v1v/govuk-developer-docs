@@ -11,7 +11,9 @@ node {
     }
     stage("Lint documentation") {
       sh '''
-        env | sort
+        whereis python
+        which python
+        python --version
         curl https://pre-commit.com/install-local.py | python -
         git diff-tree --no-commit-id --name-only -r $(git rev-parse HEAD) | xargs pre-commit run --files | tee pre-commit-report.txt
       '''
