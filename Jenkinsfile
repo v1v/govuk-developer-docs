@@ -9,17 +9,12 @@ node {
       govuk.checkoutFromGitHubWithSSH(REPOSITORY, [org: 'v1v'])
       sh 'env | sort'
     }
-
-    stage("Merge master") {
-      govuk.mergeMasterBranch()
-    }
-
     stage("Lint documentation") {
-      sh """
+      sh '''
         env | sort
         curl https://pre-commit.com/install-local.py | python -
-        git diff-tree --no-commit-id --name-only -r ${commit} | xargs pre-commit run --files | tee ${reportFileName}
-      """
+        git diff-tree --no-commit-id --name-only -r $(git rev-parse HEAD) | xargs pre-commit run --files | tee pre-commit-report.txt
+      '''
     }
 
 }
