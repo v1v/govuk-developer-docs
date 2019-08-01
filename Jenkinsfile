@@ -27,20 +27,12 @@ node {
       govuk.mergeMasterBranch()
     }
 
-    stage("Set up content schema dependency") {
-      govuk.contentSchemaDependency()
-    }
-
-    stage("bundle install") {
-      govuk.bundleApp()
-    }
-
-    stage("Lint Ruby") {
-      govuk.rubyLinter("app lib helpers spec bin")
-    }
-
     stage("Lint documentation") {
-      sh "vale --glob='*.md' ."
+      sh """
+        env | sort
+        curl https://pre-commit.com/install-local.py | python -
+        git diff-tree --no-commit-id --name-only -r ${commit} | xargs pre-commit run --files | tee ${reportFileName}
+      """
     }
 
     stage("Tests") {
