@@ -17,6 +17,8 @@ Ruby code needs to go into `/app`.
 You can pull down the latest version of the template by running:
 sdfsf
 
+US
+
 ```sh
 bin/update
 ```
