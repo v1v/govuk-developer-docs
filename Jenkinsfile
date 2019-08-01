@@ -6,7 +6,7 @@ REPOSITORY = 'govuk-developer-docs'
 
 node {
     stage("Checkout") {
-      govuk.checkoutFromGitHubWithSSH(REPOSITORY, org: 'v1v')
+      govuk.checkoutFromGitHubWithSSH(REPOSITORY, [org: 'v1v'])
       sh 'env | sort'
     }
 
